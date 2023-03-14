@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="respnsive.css" />
+		<script defer src="script.js"></script>
+		<title>PomoDoro</title>
+	</head>
+	<body>
+		<main>
+			<h2 class="title">Pomodoro</h2>
+			<div class="timers">
+				<div class="timer pomodoro active" data-time="1500">pomodoro</div>
+				<div class="timer shortBreak" data-time="300">short break</div>
+				<div class="timer longBreak" data-time="1200">long break</div>
+			</div>
+			<div class="counter">
+				<div id="app"></div>
+			</div>
+			<div class="stop hidden">Pause</div>
+			<div class="settings">⚙</div>
+			<div class="settings-overlay hidden">
+				<div class="settings-popUp">
+					<div class="head-popup">
+						<h2>Settings</h2>
+						<div class="close"><img src="close-icon.png" alt="close" /></div>
+					</div>
+					<div class="main-popup">
+						<h2>TIME <span>(MINUTES)</span></h2>
+						<div class="inputs">
+							<div>
+								<label for="pomodor">Pomodoro</label>
+								<input type="number" min="0" id="pomo" value="25" />
+							</div>
+							<div>
+								<label for="short">Short Break</label>
+								<input type="number" min="0" id="short" value="5" />
+							</div>
+							<div>
+								<label for="long">Long Break</label>
+								<input type="number" min="0" id="long" value="20" />
+							</div>
+						</div>
+						<div class="colors">
+							<h2>COLOR</h2>
+							<div class="all-colors">
+								<div class="clr clr-active primary" data-color="#ed757a"></div>
+								<div class="clr second" data-color="#72f3f7"></div>
+								<div class="clr third" data-color=" #da82f9"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="apply">Apply</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,177 @@
+@media (max-width: 1441px) {
+	.inputs div input {
+		width: 13rem;
+	}
+	.settings-popUp {
+		height: 75%;
+	}
+}
+
+@media (max-width: 1025px) {
+	.inputs {
+		gap: 2rem;
+	}
+
+	.inputs div input {
+		width: 10rem;
+	}
+	.main-popup h2 {
+		font-size: 2rem;
+	}
+	.all-colors {
+		width: 55%;
+	}
+}
+
+@media (max-width: 769px) {
+	.settings-popUp {
+		height: 85%;
+	}
+
+	.inputs {
+		gap: 1rem;
+	}
+
+	.colors {
+		padding-top: 6rem;
+	}
+
+	.all-colors {
+		width: 56%;
+	}
+
+	.all-colors div {
+		height: 5rem;
+		width: 5rem;
+	}
+
+	.clr-active::after {
+		font-size: 3rem;
+	}
+
+	.apply {
+		height: 4rem;
+	}
+
+	.stop {
+		bottom: 18rem;
+	}
+
+	.counter {
+		width: 36rem;
+		height: 36rem;
+	}
+
+	.base-timer {
+		height: 330px;
+		width: 330px;
+	}
+
+	.base-timer__label {
+		height: 330px;
+		width: 330px;
+		font-size: 8rem;
+	}
+	.timers div {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 426px) {
+	.inputs div {
+		gap: 0px;
+	}
+	.inputs {
+		height: 50%;
+	}
+	.inputs div input {
+		width: 17rem;
+	}
+
+	.settings-popUp {
+		height: 88%;
+		gap: 2rem;
+		padding-inline: 10rem;
+	}
+	.head-popup::after {
+		opacity: 0;
+	}
+	.head-popup {
+		gap: 0;
+		width: 110%;
+	}
+
+	.apply {
+		height: 2rem;
+		width: 9rem;
+
+		font-size: 1.5rem;
+		bottom: -1rem;
+		padding: 7px;
+	}
+
+	.all-colors div {
+		height: 4rem;
+		width: 4rem;
+	}
+
+	.all-colors {
+		width: 100%;
+	}
+
+	.colors {
+		padding-top: 4rem;
+		height: 30rem;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	.clr-active::after {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 376px) {
+	.counter {
+		width: 30rem;
+		height: 30rem;
+	}
+
+	.base-timer {
+		height: 280px;
+		width: 280px;
+	}
+
+	.base-timer__label {
+		height: 280px;
+		width: 280px;
+		font-size: 6rem;
+	}
+	.stop {
+		bottom: 20rem;
+	}
+	.settings-popUp {
+		padding-inline: 8rem;
+	}
+}
+
+@media (max-width: 321px) {
+	.timers {
+		padding-inline: 1rem;
+	}
+
+	.timers div {
+		font-size: 1.3rem;
+	}
+	.settings-popUp {
+		padding-left: 3rem;
+	}
+	.head-popup {
+		gap: 0;
+		width: 140%;
+	}
+
+	.colors {
+		margin: 15px;
+	}
+}

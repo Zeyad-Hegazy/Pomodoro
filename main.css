@@ -1,0 +1,310 @@
+:root {
+	--backGround: #1e2240;
+	--mianColor: #ed757a;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: system-ui;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	background-color: var(--backGround);
+}
+
+.title {
+	font-size: 3rem;
+	letter-spacing: 3px;
+	font-weight: bold;
+	color: aliceblue;
+}
+
+.timers {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5rem;
+	height: 10%;
+	background-color: aliceblue;
+	padding-inline: 2rem;
+	background-color: #14172b;
+	border-radius: 3rem;
+}
+
+.timers .active {
+	background-color: var(--mianColor);
+	color: #1e2240;
+	padding: 1.7rem;
+	border-radius: inherit;
+}
+
+.timers div {
+	font-size: 2rem;
+	color: gray;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.counter {
+	height: 40rem;
+	width: 40rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #26294b;
+	box-shadow: -10px -10px 20px 0px var(--mianColor), 20px 20px 50px 0px #0d1023;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.base-timer {
+	position: relative;
+	height: 370px;
+	width: 370px;
+}
+
+.base-timer__label {
+	position: absolute;
+
+	height: 370px;
+	width: 370px;
+
+	top: -3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 9rem;
+	color: aliceblue;
+}
+
+.base-timer__circle {
+	fill: none;
+	stroke: none;
+}
+.base-timer__path-elapsed {
+	stroke-width: 4px;
+	stroke: #26294b;
+}
+
+.base-timer__path-remaining {
+	stroke-width: 4px;
+
+	stroke-linecap: round;
+
+	transform: rotate(90deg);
+	transform-origin: center;
+
+	transition: 1s linear all;
+
+	stroke: var(--mianColor);
+}
+
+.base-timer__svg {
+	transform: scaleX(-1);
+}
+
+.stop {
+	font-size: 3.5rem;
+	color: aliceblue;
+	position: absolute;
+	bottom: 22rem;
+	cursor: pointer;
+	letter-spacing: 3px;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.settings {
+	font-size: 4rem;
+	color: #edf0fa;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.settings-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.settings-popUp {
+	position: relative;
+	height: 70%;
+	width: 40%;
+	background-color: #fff;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding-inline: 6rem;
+}
+
+.head-popup {
+	display: flex;
+	justify-content: space-between;
+	gap: 20rem;
+	align-items: center;
+	height: 10rem;
+	width: 100%;
+	position: relative;
+}
+
+.head-popup::after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	height: 1px;
+	width: 100%;
+	background-color: rgba(128, 128, 128, 0.635);
+}
+.head-popup h2 {
+	font-size: 3.5rem;
+	color: #1e2240;
+}
+
+.close {
+	width: 2rem;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+.close img {
+	max-width: 100%;
+}
+
+.main-popup {
+	height: calc(100% - 15rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 100%;
+	gap: 3rem;
+}
+
+.main-popup h2 {
+	font-size: 3rem;
+	letter-spacing: 5px;
+}
+
+.main-popup h2 span {
+	letter-spacing: 5px;
+}
+
+.inputs {
+	display: flex;
+	width: 100%;
+	height: 20%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 5rem;
+}
+.inputs div {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.inputs div label {
+	height: 30%;
+	font-size: 17px;
+	color: #494949;
+}
+
+.inputs div input {
+	font-size: 30px;
+	height: 40px;
+	padding: 10px;
+	width: 15rem;
+	background-color: #edf0fa;
+	border: none;
+	outline: none;
+	border-radius: 1rem;
+}
+
+.colors {
+	height: 30rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.all-colors {
+	width: 40%;
+	height: 40%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.all-colors div {
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: -2px 3px 10px 0px #0000007d;
+}
+
+.clr-active {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.clr-active::after {
+	content: "✔";
+	position: absolute;
+	font-size: 4rem;
+	/* color: #26294b; */
+	color: #fff;
+	filter: drop-shadow(0px 5px 3px black);
+}
+
+.primary {
+	background-color: #ed757a;
+}
+.second {
+	background-color: #72f3f7;
+}
+.third {
+	background-color: #da82f9;
+}
+
+.apply {
+	height: 5rem;
+	width: 15rem;
+	text-align: center;
+	padding: 10px;
+	font-size: 3rem;
+	background-color: var(--mianColor);
+	border-radius: 3rem;
+	position: relative;
+	bottom: 3rem;
+	cursor: pointer;
+	color: aliceblue;
+	font-weight: 500;
+}
