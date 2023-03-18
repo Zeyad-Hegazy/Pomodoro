@@ -127,8 +127,14 @@ function startTimer() {
 				formatTimeLeft(timeLeft);
 
 			if (timeLeft === 0) {
+				let alarm = new Audio("./ESAlarmClock Bells.wav");
+				alarm.play();
+				setTimeout(() => {
+					alarm.pause();
+					alarm.currentTime = 0;
+				}, 5000);
 				onTimesUp();
-				init();
+				init(document.querySelector(".active").dataset.time);
 			}
 
 			setCircleDasharray();
