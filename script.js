@@ -1,6 +1,7 @@
 "use strict";
 
 // elements
+const tapTitle = document.querySelector("title");
 const timesBar = document.querySelector(".timers");
 const timer = document.querySelectorAll(".timer");
 const pomodoro = document.querySelector(".pomodoro");
@@ -123,8 +124,9 @@ function startTimer() {
 
 			timeLeft = timeLimit - timePassed;
 
-			document.getElementById("base-timer-label").innerHTML =
+			document.getElementById("base-timer-label").textContent =
 				formatTimeLeft(timeLeft);
+			tapTitle.textContent = formatTimeLeft(timeLeft);
 
 			if (timeLeft === 0) {
 				let alarm = new Audio("./ESAlarmClock Bells.wav");
